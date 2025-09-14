@@ -4,12 +4,12 @@ data "azurerm_key_vault" "example" {
 }
 
 data "azurerm_key_vault_secret" "username" {
-  name         = "username"
+  name         = "windowsvm-username"
   key_vault_id = data.azurerm_key_vault.example.id
 }
 
 data "azurerm_key_vault_secret" "password" {
-  name         = "password"
+  name         = "windowsvm-password"
   key_vault_id = data.azurerm_key_vault.example.id
 }
 
