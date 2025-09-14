@@ -30,7 +30,7 @@ resource "azurerm_storage_account" "example" {
 }
 */
 
-
+/*
 ##test Secret-scanning functionality of GA
 # Create a resource group
 resource "azurerm_resource_group" "new-rg" {
@@ -94,3 +94,4 @@ resource "azurerm_windows_virtual_machine" "example" {
     version   = "latest"
   }
 }
+*/
