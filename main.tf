@@ -30,7 +30,6 @@ resource "azurerm_storage_account" "example" {
 }
 */
 
-/*
 ##test Secret-scanning functionality of GA
 # Create a resource group
 resource "azurerm_resource_group" "new-rg" {
@@ -76,8 +75,8 @@ resource "azurerm_windows_virtual_machine" "example" {
   resource_group_name = azurerm_resource_group.new-rg.name
   location            = azurerm_resource_group.new-rg.location
   size                = "Standard_F2"
-  admin_username      = "adminuser"
-  admin_password      = "P@$$w0rd1234!"
+  admin_username      = data.azurerm_key_vault_secret.username.value
+  admin_password      = data.azurerm_key_vault_secret.password.value
   network_interface_ids = [
     azurerm_network_interface.main.id,
   ]
@@ -94,4 +93,3 @@ resource "azurerm_windows_virtual_machine" "example" {
     version   = "latest"
   }
 }
-*/
